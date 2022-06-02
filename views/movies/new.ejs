@@ -8,18 +8,23 @@
 </head>
 <body>
     <header>
-        <h1>Movies</h1>
+        <h1>Contribute a Movie</h1>
         <nav>
             <ul>
                 <li>
                     <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="/movies/new">Add a new Movie</a>
+                    <a href="/movies">Movies Idex</a>
                 </li>
             </ul>
         </nav>
     </header>
-    
+    <main>
+        <form action="/movies" method="POST">
+            <input type="text" name="name" />
+            <input type="submit" value="Contribute a Movie" />
+        </form>
+    </main>
 </body>
 </html>
