@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
-const moviesController = require('./controllers/movies');
 const app = express();
+const moviesController = require('./controllers/movies');
 const mongoose = require('mongoose');
 const methodOverried = require('method-override');
 const PORT = 3000
@@ -17,6 +17,7 @@ db.on('error', (err) => console.log(`${err.message} mongo is not connected `));
 db.on('connected', () => console.log('mongo connected'));
 db.on('disconnected', () => console.log('mongo disconnected'));
 
+app.use(methodOverried('_method'));
 app.use(express.urlencoded({ extended: false }));
 app.use('/movies', moviesController);
 
