@@ -5,12 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movienight7</title>
+    <style>
+    body {
+        background: url(https://i.imgur.com/roWmotE.jpeg);
+        background-size: 400px;
+        background-position: top;
+        background-color: rgb(234, 188, 188);
+
+    } 
+    </style>
 </head>
 <body>
     <header>
         <h1>Movies</h1>
         <nav>
             <ul>
+                
                 <li>
                     <a href="/">Home</a>
                 </li>
@@ -20,6 +30,16 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <h2>Movie list</h2>
+        <ul>
+            <% for(let i = 0; i < movies.length; i++){ %>
+                <li>
+                    <a href="/movies/<%= movies[i]._id %>"><%= movies[i].name %></a>
+                </li>
+                <% } %>
+        </ul>
+    </main>
     
 </body>
 </html>

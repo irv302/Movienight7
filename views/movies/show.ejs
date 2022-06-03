@@ -17,7 +17,7 @@
 </head>
 <body>
     <header>
-        <h1>Contribute a Movie</h1>
+        <h1>Show Page for <%= movies.name %></h1>
         <nav>
             <ul>
                 <li>
@@ -30,10 +30,12 @@
         </nav>
     </header>
     <main>
-        <form action="/movies" method="POST">
-            <input type="text" title="name" />
-            <input type="submit" value="Contribute a Movie" />
-        </form>
+        <section>
+            <h2>Movie Attributes:</h2>
+            <ul>
+                <li>Title: <%= movies.name %></li>
+            </ul>
+        </section>
     </main>
 </body>
 </html>
