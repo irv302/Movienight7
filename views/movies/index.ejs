@@ -14,22 +14,22 @@
         background-color: rgb(234, 188, 188);
 
     } 
-    h1, h2 {
+    div, h1, h2 {
         background: linear-gradient(90deg, #d93838, #0003c2 );
             background-clip: text;
             -webkit-background-clip: text;
-            text-align: center;
+            text-align:center;
             color:transparent;
             backdrop-filter: blur(10px);
     }
     a {
-            color: rgb(89, 3, 187);
+            color: rgb(5, 181, 245);
             font-size:xx-large;
             background-color: rgba(165, 42, 42, 0.075);
           
         }
         a:hover {
-            background-color: yellowgreen;
+            background-color: rgb(249, 64, 7);
         }
     </style> 
 </head>
@@ -49,14 +49,20 @@
         </nav>
     </header>
     <main>
-        <h2>Movie list</h2>
+        <div>
+        <h2>My Movie list</h2>
         <ul>
             <% for(let i = 0; i < movies.length; i++){ %>
                 <li>
-                    <a href="/movies/<%=movies._id%>"><%= movies[i].title %></a>
+                    <a href="/movies/<%=movies[i]._id%>"><%= movies[i].title %></a><br />
+                    <a href="/movies/<%=movies[i]._id%>/edit"><button>Edit</button></a><br />   
+                    <form action="/movies/<%=movies[i]._id%>?_method=DELETE" method="POST">
+                        <input type="submit" value="DELETE" />
+                    </form>
                 </li>
                 <% } %>
         </ul>
+        </div>
     </main>
     
 </body>

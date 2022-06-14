@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<style>
+    body {
+        background: url(https://i.imgur.com/roWmotE.jpeg);
+        background-size: 400px;
+        background-position: top;
+        background-color: rgb(234, 188, 188);
+    }
+    div {
+        background: linear-gradient(90deg, #d93838, #0003c2 );
+            background-clip: text;
+            -webkit-background-clip: text;
+            text-align: center;
+            color:transparent;
+            backdrop-filter: blur(10px);
+    }
+</style>
+<body>
+    <a href="/movies">Home</a>
+
+    <div>
+        <form action="/movies/<%=movies._id%>?_method=PUT" method="POST">
+            Title: <input 
+            type="text"
+            name="title"
+            value="<%movies.title%>"
+            placeholder="Title" 
+            /><br />
+            Ddescription: <input
+            type="text"
+            name="description"
+            value="<%movies.description%>"
+            placeholder="Description"
+            <br />
+            Genre: <input
+            type="text"
+            name="genre"
+            value="<%movies.genre%>"
+            placeholder="Genre"
+            /><br />
+            Rating: <input 
+            type="text"
+            name="rating"
+            value="<%movies.rating%>"
+            placeholder="Rating" 
+            /><br />
+
+            
+            <br />
+            <input 
+            type="submit" 
+            value="Update your Movie"
+             />
+        </form>
+        </div>
+</body>
+</html>

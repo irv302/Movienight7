@@ -13,6 +13,14 @@
             background-color: rgb(234, 188, 188);
 
         } 
+        div, h1, h2 {
+        background: linear-gradient(90deg, #d93838, #0003c2 );
+            background-clip: text;
+            -webkit-background-clip: text;
+            text-align: center;
+            color:transparent;
+            backdrop-filter: blur(10px);
+    }
         a {
             color: rgb(89, 3, 187);
             font-size:xx-large;
@@ -40,14 +48,18 @@
     </header>
     <main>
         <section>
+            <div>
             <h2>Movie Attributes:</h2>
             <ul>
-                <li>Title: <%=movies.title%></li>
+                <li>Description: <%=movies.description%></li>
             </ul>
-            <h1><%=movies.title%></h1>
+            
+            <h2><%=movies.rating%></h2>
             <h3><%=movies.genre%></h3>
+            </div>
             <form href="/movies/<%= movies._id %>?_method=DELETE" method="POST">
                 <input type="submit" value="Delete Movies" />
+
             </form>
         </section>
     </main>

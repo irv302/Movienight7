@@ -17,9 +17,9 @@ router.post('/', (req, res) => {
     });
 });
 
-router.get('/', (req,res) => {
-    res.render('movies/index.ejs');
-});
+// router.get('/', (req,res) => {
+//     res.render('movies/index.ejs');
+// });
 
 router.get('/new', (req, res) => {
     res.render('movies/new.ejs');
@@ -28,7 +28,15 @@ router.get('/new', (req, res) => {
 
 router.get('/:id', (req, res) => {
     Movies.findById(req.params.id, (err, foundMovies) => {
-        res.render('/movies/show.ejs', {
+        res.render('movies/show.ejs', {
+            movies: foundMovies
+        });
+    });
+});
+
+router.get('/:id/edit', (req, res) => {
+    Movies.findById(req.params.id, (err, foundMovies) => {
+        res.render('movies/edit.ejs', {
             movies: foundMovies
         });
     });

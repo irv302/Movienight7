@@ -13,14 +13,15 @@
             background-color: rgb(234, 188, 188);
 
         } 
-        h1 {
-            background: linear-gradient(90deg, #d93838, #0003c2 );
+        
+        div, h1, h2 {
+        background: linear-gradient(90deg, #d93838, #0003c2 );
             background-clip: text;
             -webkit-background-clip: text;
             text-align: center;
             color:transparent;
             backdrop-filter: blur(10px);
-        }
+    }
         a {
             color: rgb(89, 3, 187);
             font-size:xx-large;
@@ -52,23 +53,37 @@
         </nav>
     </header>
     <main>
+        <div>
         <form action="/movies" method="POST">
             Title: <input 
             type="text"
             name="title"
             placeholder="Title" 
             /><br />
+            Ddescription: <input
+            type="text"
+            name="description"
+            placeholder="Description"
+            <br />
             Genre: <input
             type="text"
             name="genre"
+            placeholder="Genre"
+            /><br />
+            Rating: <input 
+            type="text"
+            name="rateing"
+            placeholder="Rating" 
             /><br />
 
+            
             <br />
             <input 
             type="submit" 
             value="Contribute a Movie"
              />
         </form>
+        </div>
     </main>
 </body>
 </html>
