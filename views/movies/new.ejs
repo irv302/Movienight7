@@ -13,6 +13,28 @@
             background-color: rgb(234, 188, 188);
 
         } 
+        h1 {
+            background: linear-gradient(90deg, #d93838, #0003c2 );
+            background-clip: text;
+            -webkit-background-clip: text;
+            text-align: center;
+            color:transparent;
+            backdrop-filter: blur(10px);
+        }
+        a {
+            color: rgb(89, 3, 187);
+            font-size:xx-large;
+            background-color: rgba(165, 42, 42, 0.313);
+            
+            
+        }
+        a:hover {
+            background-color: yellowgreen;
+        }
+        input:hover {
+            background-color: rgba(23, 23, 118, 0.361);
+            /* color: rgb(247, 0, 0); */
+        }
     </style>
 </head>
 <body>
@@ -31,8 +53,21 @@
     </header>
     <main>
         <form action="/movies" method="POST">
-            <input type="text" title="title" />
-            <input type="submit" value="Contribute a Movie" />
+            Title: <input 
+            type="text"
+            name="title"
+            placeholder="Title" 
+            /><br />
+            Genre: <input
+            type="text"
+            name="genre"
+            /><br />
+
+            <br />
+            <input 
+            type="submit" 
+            value="Contribute a Movie"
+             />
         </form>
     </main>
 </body>

@@ -15,9 +15,29 @@
 
         } 
         h1 { 
+            background: linear-gradient(90deg, #060000, #f70000 );
+            background-clip: text;
+            -webkit-background-clip: text;
             text-align: center;
-            color:rgb(45, 83, 238)
+            color:transparent;
+            backdrop-filter: blur(10px);
             
+        }
+        li {
+            color: rgb(255, 146, 127)
+        }
+        a {
+            color: rgb(28, 2, 58);
+            font-size:xx-large;
+            background-color: rgba(175, 26, 26, 0.463);
+            padding: 13px;
+            border-radius: 100px;
+            box-shadow: 0 2px 4px rgba(0,0,0,10);
+            
+           
+        }
+        a:hover {
+            background-color: yellowgreen;
         }
     </style>
 </head>
@@ -29,9 +49,7 @@
                 <li>
                     <a href="/movies">Movies</a>
                 </li>
-                <!-- <li>
-                    <a href="/contribute">Contribute new movie</a>
-                </li> -->
+                
             </ul>
         </nav>
     </header>

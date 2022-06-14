@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/style/in.css"> -->
     <title>Movienight7</title>
-    <style>
+  <style>
     body {
         background: url(https://i.imgur.com/roWmotE.jpeg);
         background-size: 400px;
@@ -13,7 +14,24 @@
         background-color: rgb(234, 188, 188);
 
     } 
-    </style>
+    h1, h2 {
+        background: linear-gradient(90deg, #d93838, #0003c2 );
+            background-clip: text;
+            -webkit-background-clip: text;
+            text-align: center;
+            color:transparent;
+            backdrop-filter: blur(10px);
+    }
+    a {
+            color: rgb(89, 3, 187);
+            font-size:xx-large;
+            background-color: rgba(165, 42, 42, 0.075);
+          
+        }
+        a:hover {
+            background-color: yellowgreen;
+        }
+    </style> 
 </head>
 <body>
     <header>
@@ -35,7 +53,7 @@
         <ul>
             <% for(let i = 0; i < movies.length; i++){ %>
                 <li>
-                    <a href="/movies/<%= movies[i]._id %>"><%= movies[i].title %></a>
+                    <a href="/movies/<%=movies._id%>"><%= movies[i].title %></a>
                 </li>
                 <% } %>
         </ul>
