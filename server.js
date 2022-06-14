@@ -5,12 +5,17 @@ const app = express();
 const moviesController = require('./controllers/movies');
 const mongoose = require('mongoose');
 const methodOverried = require('method-override');
-const PORT = 3000
+// const PORT = 3000
 const Movie = require("./modles/movies");
 const res = require('express/lib/response');
 
-mongoose.connect(process.env.DATABASE_URL, {
-    // useNewUrlParser: true,
+const {
+    PORT,
+    DATABASE_URL
+} = process.env
+
+mongoose.connect(DATABASE_URL, {
+    useNewUrlParser: true,
     useUnifiedTopology: true,
 
 });
